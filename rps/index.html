@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissor</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>Rock Paper Scissor</p>
-    <button onclick="rock()">Rock</button>
-    <button onclick="paper()">Paper</button>
-    <button onclick="scissor()">Scissor</button>
+    <p class="title">Rock Paper Scissor</p>
+    <button onclick="rock()" class="move_button">
+        <img src="images/rock.png" alt="rock" class="move_icon"></button>
+    <button onclick="paper()" class="move_button"><img src="images/paper.png" alt="paper" class="move_icon"></button>
+    <button onclick="scissor()" class="move_button"><img src="images/scissor.png" alt="scissor" class="move_icon"></button>
+    <p class="js_result"></p>
+    <p class="js_moves para"></p>
+    <p class="js-score para"></p>
+    <button onclick="reset()" class="reset_button">Reset Score</button>
+
+    <button onclick="autoplay()" class="autoplay_button">AutoPlay</button>
 </body>
+<script src="scripts.js"></script>
 </html>
