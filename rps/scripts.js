@@ -64,9 +64,30 @@ function reset(){
     updateScore()
 }
 
+let isAutoplay = false
+let intervalID
+
 function autoplay(){
-    setInterval(function(){
+    if (!isAutoplay) {
+    intervalID = setInterval(function(){
+        const player_Move=rps_generator()
+
+        if (player_Move==='rock') {
+            rock()
+        }
+        else if (player_Move==='scissor'){
+            scissor()
+        }
+        else if (player_Move==='paper'){
+            paper()
+        }
     }, 2000)
+    isAutoplay = true
+    }
+    else{
+        clearInterval(intervalID);
+        isAutoplay=false;
+    }
 }
 
 function updateScore(){
